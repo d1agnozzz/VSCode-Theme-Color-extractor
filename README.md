@@ -1,4 +1,4 @@
-# VSCode-Theme-Color-extracto
+# VSCode-Theme-Color-extractor
 ## About
 This is a small project, which was created to export VSCode theme colors and use them as palette in Photoshop. 
 
