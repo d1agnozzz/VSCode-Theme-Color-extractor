@@ -7,7 +7,8 @@ def extract_colors(filename: str) -> set[str]:
 
         text = f.read()
 
-        regex = r"^(?!\s*//)(?:.*)(#([A-Za-z0-9]{6})).*$"
+        # regex matches every HEX code in lines not starting with '//' (not commented lines)
+        regex = r"^(?!\s*//)(?:.*)(#([A-Za-z0-9]{6})).*$" 
 
         p = re.compile(regex, re.MULTILINE)
         m = re.finditer(p, text)
