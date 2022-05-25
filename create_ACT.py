@@ -22,7 +22,9 @@ def write_ACT(HEX_colors: set[str], filename: str):
         for j, component in enumerate(hex_to_rgb(hex_color)):
             bytes[(i * 3) + j] = component
 
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    if filename.find('/') != -1:
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        
     with open(filename, "wb+") as act:
         act.write(bytes)
 
